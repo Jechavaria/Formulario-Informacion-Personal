@@ -115,6 +115,8 @@ namespace Formulario
             resources.ApplyResources(this.btnCancelar, "btnCancelar");
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+
             // 
             // gbInformacionPersonal
             // 
