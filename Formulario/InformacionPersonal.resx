@@ -444,6 +444,21 @@
   <data name="&gt;&gt;gbInformacionPersonal.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="lblCorreo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCorreo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 46</value>
+  </data>
+  <data name="lblCorreo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 16</value>
+  </data>
+  <data name="lblCorreo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblCorreo.Text" xml:space="preserve">
+    <value>Correo:</value>
+  </data>
   <data name="&gt;&gt;lblCorreo.Name" xml:space="preserve">
     <value>lblCorreo</value>
   </data>
@@ -479,33 +494,6 @@
   </data>
   <data name="&gt;&gt;gbContacto.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="lblCorreo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 46</value>
-  </data>
-  <data name="lblCorreo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 16</value>
-  </data>
-  <data name="lblCorreo.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblCorreo.Text" xml:space="preserve">
-    <value>Correo:</value>
-  </data>
-  <data name="&gt;&gt;lblCorreo.Name" xml:space="preserve">
-    <value>lblCorreo</value>
-  </data>
-  <data name="&gt;&gt;lblCorreo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCorreo.Parent" xml:space="preserve">
-    <value>gbContacto</value>
-  </data>
-  <data name="&gt;&gt;lblCorreo.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="btnLimpiar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 13.8pt</value>

@@ -30,10 +30,65 @@ namespace Formulario
         }
 
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+
+        private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.Close();
+
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar!= 13)
+            {
+                e.Handled = true;
+            }
+            else if (e.KeyChar == (char)13)
+            {
+                txtNombre.Focus();
+                e.Handled = true;
+            }
         }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                txtApellido.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                txtCorreo.Focus();
+                e.Handled = true;
+            }
+        }
+
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                txtTelefono.Focus();
+                e.Handled = true;
+            }
+
+        }
+
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 13)
+            {
+                e.Handled = true;
+            }
+            else if (e.KeyChar == (char)13)
+            {
+                btnAceptar.Focus();
+                e.Handled = true;
+            }
+        }
+
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -44,10 +99,11 @@ namespace Formulario
                 string.IsNullOrWhiteSpace(txtTelefono.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos antes de continuar.", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDocumento.Focus();
                 return;
             }
 
-            DialogResult resultado = MessageBox.Show("Información guardada correctamente.\n¿Desea registrar otro usuario?","Éxito", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("Información guardada correctamente.\n¿Desea registrar otro usuario?", "Éxito", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
             {
@@ -58,28 +114,22 @@ namespace Formulario
                 this.Close();
             }
         }
+
+
+
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
         }
 
 
-        private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
-            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)
-            {
-                e.Handled = true;
-            }
+            this.Close();
         }
 
-        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
 
-            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)
-            {
-                e.Handled = true;
-            }
-        }
+
+
     }
 }
